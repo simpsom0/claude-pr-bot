@@ -6,6 +6,14 @@ This container includes all necessary dependencies and provides an easy way to r
 
 An optional proxy can be enabled to track all the requests made by Claude Code in a local SQLite database.
 
+## Local Setup
+
+1. confirm ./compose.yml only points to local build files
+2. run `docker compose build`
+3. run `chmod +x ./bin/claude-container`
+4. run `sudo cp ./bin/claude-container /usr/local/bin`
+5. run `claude-container` anywhere
+
 ## Docker Hub
 
 Images available on Docker Hub: [nezhar/claude-container](https://hub.docker.com/r/nezhar/claude-container) and [nezhar/claude-proxy](https://hub.docker.com/r/nezhar/claude-proxy)
