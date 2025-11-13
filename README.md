@@ -20,7 +20,7 @@ Images available on Docker Hub: [nezhar/claude-container](https://hub.docker.com
 
 ## Compatibility Matrix
 
-**Latest Release:** 1.3.2 (Claude Code 2.0.29)
+**Latest Release:** 1.4.2 (Claude Code 2.0.36)
 
 | Container Version | Claude Code Version |
 |-------------------|---------------------|
@@ -28,6 +28,7 @@ Images available on Docker Hub: [nezhar/claude-container](https://hub.docker.com
 | 1.1.x             | 2.0.x               |
 | 1.2.x             | 2.0.x               |
 | 1.3.x             | 2.0.x               |
+| 1.4.x             | 2.0.x               |
 
 ## Quick Start
 
@@ -74,6 +75,26 @@ source ~/.bashrc
 ```
 
 Once installed, you can use tab completion with `claude-container --<TAB>` to see all available options
+
+#### Updating to the Latest Version
+
+To update to the latest version, simply re-download the helper script and completions:
+
+```bash
+# Update helper script (user install)
+curl -o ~/.local/bin/claude-container https://raw.githubusercontent.com/nezhar/claude-container/main/bin/claude-container
+
+# Or for system-wide install
+sudo curl -o /usr/local/bin/claude-container https://raw.githubusercontent.com/nezhar/claude-container/main/bin/claude-container
+
+# Update completions (if installed)
+curl -o ~/.local/share/bash-completion/completions/claude-container https://raw.githubusercontent.com/nezhar/claude-container/main/completions/claude-container
+
+# Verify the new version
+claude-container --version
+```
+
+The helper script will automatically pull the latest Docker images when needed.
 
 ### Using Docker Compose
 
